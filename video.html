@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player</title>
+    <style>
+        #main{
+            display: flex;
+        }
+        #main *{
+            border:1px solid
+        }
+        #player{
+            flex: 7;
+        }
+        #recommend{
+            flex: 3;
+        }
+        #navbar{
+        border: 1px solid;
+        display: flex;
+        height: 30px;
+        gap: 30px;
+        margin-bottom: 10px;
+       }
+       #navbar>div{
+        display: flex;
+       }
+       #navbar h1{
+        border: 1px solid
+       }
+    </style>
+</head>
+<body onload="takeout()">
+    <div id="navbar"></div>
+    <div id="main">
+        <div id="player"></div>
+        <div id="recommend">Recommendations</div>
+    </div>
+</body>
+</html>
+<script src="video.js"></script>
+<script type="module">
+    import navbar from './components/scripts/navbar.js'
+    console.log(navbar)
+    document.getElementById('navbar').innerHTML=navbar()
+</script>
